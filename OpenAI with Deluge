@@ -1,0 +1,16 @@
+string OpenAI_API(int id)
+{
+	header = Map();
+	header.put("Content-Type","application/json");
+	header.put("Authorization","Bearer [YOUR API KEY");
+	info header;
+	request = {"model":"text-davinci-003","prompt":"Say this is a test","temperature":0,"max_tokens":7};
+	response = invokeurl
+	[
+		url :"https://api.openai.com/v1/completions"
+		type :POST
+		parameters:request.toString()
+		headers:header
+	];
+	return response;
+}
